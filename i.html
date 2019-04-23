@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="mpicker.css">
+    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="mPicker.js"></script>
+    <script src="area.js"></script>
+</head>
+<body>
+<input type="text" class="text">
+<script>
+  const mobileSelect = new MobileSelect({
+    trigger: '.text',
+    title: '请选择所在地区',
+    wheels: [
+      {data: cityArrr}
+    ],
+    transitionEnd: function (indexArr, data) {
+      console.log(data);
+    },
+    callback: function (indexArr, data) {
+      // console.log(data);
+    }
+  });
+</script>
+</body>
+</html>
